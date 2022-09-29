@@ -1,0 +1,2 @@
+vardas = ("Albinas")
+print(vardas)
