@@ -1,4 +1,7 @@
 from tkinter import *
+expression = ""
+
+
 
 pagrindinis_langas = Tk()
 pagrindinis_langas.title("Skaiciuotuvas")
@@ -9,7 +12,10 @@ equation = StringVar()
 lauko_ivedimas = Entry(pagrindinis_langas, textvariable=equation)
 lauko_ivedimas.grid(columnspan=4, ipadx=70)
 
-    
+def mygtuko_ivedimas(num):
+    global expression
+    expression = expression + str(num)
+    equation.set(expression)
 
     
    
