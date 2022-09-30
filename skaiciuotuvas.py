@@ -26,8 +26,8 @@ mygtukas7 = Button(pagrindinis_langas, text="7", command=mygtuko_ivedimas)
 mygtukas8 = Button(pagrindinis_langas, text="8", command=mygtuko_ivedimas)
 mygtukas9 = Button(pagrindinis_langas, text="9", command=mygtuko_ivedimas)
 mygtukas0 = Button(pagrindinis_langas, text="0", command=mygtuko_ivedimas)
-mygtukas11= Button(pagrindinis_langas, text="=", command=mygtuko_ivedimas)
-mygtukas12= Button(pagrindinis_langas, text="+", command=mygtuko_ivedimas)
+mygtukas_plius= Button(pagrindinis_langas, text="+", command=mygtuko_ivedimas)
+mygtukas_lygu= Button(pagrindinis_langas, text="=", command=mygtuko_ivedimas)
 
 
 
@@ -42,8 +42,8 @@ mygtukas7.grid(row=1, column=0)
 mygtukas8.grid(row=1, column=1)
 mygtukas9.grid(row=1, column=2)
 mygtukas0.grid(row=4, column=2)
-mygtukas11.grid(row=1, column=2)
+mygtukas_plius.grid(row=1, column=2)
 
-mygtukas12.grid(row=1, column=2)
+mygtukas_lygu.grid(row=1, column=2)
 
 pagrindinis_langas.mainloop()
