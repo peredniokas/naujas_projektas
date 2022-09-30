@@ -4,6 +4,7 @@ Skaiciuotuvas = Tk()
 
 Skaiciuotuvas.geometry("320x340")
 Skaiciuotuvas.title("Pragaro Skaiciuotuvas")
+Skaiciuotuvas.resizable(0, 0)
 input_frame = Frame(Skaiciuotuvas, width= 316, height= 50, bd= 3, highlightbackground= "Green", highlightcolor= "black")
 input_frame.pack(side = TOP)
 
@@ -29,6 +30,14 @@ mygtukas0 = Button(btns_frame, text="0", command= lambda: paspaudimas(0))
 mygtukas1.grid(row=3, column=0)
 mygtukas2.grid(row=3, column=1)
 mygtukas3.grid(row=3, column=2)
+mygtukas4.grid(row=2, column=0)
+mygtukas5.grid(row=2, column=1)
+mygtukas6.grid(row=2, column=2)
+mygtukas7.grid(row=1, column=0)
+mygtukas8.grid(row=1, column=1)
+mygtukas9.grid(row=1, column=2)
+mygtukas0.grid(row=4, column=0)
+
 
 
 
