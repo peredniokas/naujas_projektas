@@ -23,17 +23,12 @@ def clear():
  
 if __name__ == "__main__":
     Skaiciuotuvas = Tk()
- 
     Skaiciuotuvas.configure(background="light green")
- 
     Skaiciuotuvas.title("Keistas Skaiciuotuvas")
- 
     Skaiciuotuvas.geometry("270x150")
  
     equation = StringVar()
- 
     expression_field = Entry(Skaiciuotuvas, textvariable=equation)
- 
     expression_field.grid(columnspan=4, ipadx=70)
  
     mygtukas_1 = Button(Skaiciuotuvas, text=' 1 ', fg='black', bg='red',command=lambda: press(1), height=1, width=7)
