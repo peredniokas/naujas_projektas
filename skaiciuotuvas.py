@@ -24,22 +24,56 @@ def mygtukas_isvalantis():
 def mygtukas_plius():
     pirmas_skaicius = ivedimas1.get()
     global f_num
+    global match
+    math = "pridedame"
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
 
 def mygtukas_lygu():
     antras_skaicius = ivedimas1.get()
     ivedimas1.delete(0, END)
-    ivedimas1.insert(0, f_num + int(antras_skaicius))
+
+    if math == "pridedame":    
+        ivedimas1.insert(0, f_num + int(antras_skaicius))
+
+    if math == "atimame":
+        ivedimas1.insert(0, f_num - int(antras_skaicius))
+
+    if math == "daugyba":
+        ivedimas1.insert(0, f_num * int(antras_skaicius))
+
+    if math == "dalyba":
+        ivedimas1.insert(0, f_num / int(antras_skaicius))
+
+    
+
 
 def mygtukas_atimti():
-    pass
+    pirmas_skaicius = ivedimas1.get()
+    global f_num
+    global match
+    math = "atimame"
+    f_num = int(pirmas_skaicius)
+    ivedimas1.delete(0, END)
+
 
 def mygtukas_dauginti():
-    pass
+    pirmas_skaicius = ivedimas1.get()
+    global f_num
+    global match
+    math = "daugyba"
+    f_num = int(pirmas_skaicius)
+    ivedimas1.delete(0, END)
+
 
 def mygtukas_dalinti():
-    pass
+    pirmas_skaicius = ivedimas1.get()
+    global f_num
+    global match
+    math = "dalyba"
+    f_num = int(pirmas_skaicius)
+    ivedimas1.delete(0, END)
+
     
    
 
