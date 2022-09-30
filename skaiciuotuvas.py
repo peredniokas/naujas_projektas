@@ -14,7 +14,6 @@ ivedimas1 = Entry(pagrindinis_langas, width=35, borderwidth=5)
 ivedimas1.grid(row=0, column=0, columnspan=3)
 
 def mygtuko_ivedimas(number):
-    ivedimas1.delete(0, END)
     ivedimas1.insert(0, number)
 
 mygtukas1 = Button(pagrindinis_langas, text="1", padx=40, pady=20, command=lambda: mygtuko_ivedimas(1))
