@@ -5,25 +5,30 @@ Skaiciuotuvas = Tk()
 Skaiciuotuvas.geometry("320x340")
 Skaiciuotuvas.title("Pragaro Skaiciuotuvas")
 Skaiciuotuvas.resizable(0, 0)
-input_frame = Frame(Skaiciuotuvas, width= 312, height= 50, bd= 3, highlightbackground= "black", highlightcolor= "black")
-input_frame.pack(side = TOP)
 
-input_text = StringVar()
 
-ivedimo_ekranas = Entry(input_frame, font = ('arial', 18, 'bold'), textvariable = input_text, width = 50, bd = 0, justify = RIGHT)
-ivedimo_ekranas.grid(row = 0, column = 0)
-ivedimo_ekranas.pack(ipady = 10)
+
+
+
 
 def paspaudimas(veiksmas):
     global expression
     expression = expression + str(veiksmas)
     input_text.set(expression)
 
+input_text = StringVar()
 
+input_frame = Frame(Skaiciuotuvas, width= 312, height= 50, bd= 3, highlightbackground= "black", highlightcolor= "black")
+input_frame.pack(side = TOP)
 
+ivedimo_ekranas = Entry(input_frame, font = ('arial', 18, 'bold'), textvariable = input_text, width = 50, bd = 0, justify = RIGHT)
+ivedimo_ekranas.grid(row = 0, column = 0)
+ivedimo_ekranas.pack(ipady = 10)
 
 btns_frame = Frame(Skaiciuotuvas, width = 312, height = 272.5, bg = "grey")
 btns_frame.pack()
+
+
 
 mygtukas1 = Button(btns_frame, text="1", command= lambda: paspaudimas(1))
 mygtukas2 = Button(btns_frame, text="2", command= lambda: paspaudimas(2))
