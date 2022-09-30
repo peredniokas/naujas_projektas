@@ -10,62 +10,6 @@ pagrindinis_langas.title("Skaiciuotuvas")
 ivedimas1 = Entry(pagrindinis_langas, width=40, borderwidth=10)
 ivedimas1.grid(row=0, column=0, columnspan=3)
 
-def mygtuko_ivedimas(number):
-    ivestas = ivedimas1.get()
-    ivedimas1.delete(0, END)
-    ivedimas1.insert(0, str(ivestas)+ str(number))
-
-def mygtukas_isvalantis():
-    ivedimas1.delete(0, END)
-
-def mygtukas_plius():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global math
-    math = "pridedame"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
-
-def mygtukas_atimti():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global match
-    math = "atimame"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
-
-def mygtukas_dauginti():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global match
-    math = "dauginame"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
-
-def mygtukas_dalinti():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global match
-    math = "daliname"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
-
-def mygtukas_lygu():
-    antras_skaicius = ivedimas1.get()
-    ivedimas1.delete(0, END)
-
-    if math == "pridedame":    
-        ivedimas1.insert(0, f_num + int(antras_skaicius))
-
-    elif  math == "atimame":
-        ivedimas1.insert(0, f_num - int(antras_skaicius))
-
-    elif math == "dauginame":
-        ivedimas1.insert(0, f_num * int(antras_skaicius))
-
-    elif math == "daliname":
-        ivedimas1.insert(0, f_num / int(antras_skaicius))
-
     
    
 
@@ -79,12 +23,12 @@ mygtukas7 = Button(pagrindinis_langas, text="7", padx=40, pady=20, command=lambd
 mygtukas8 = Button(pagrindinis_langas, text="8", padx=40, pady=20, command=lambda: mygtuko_ivedimas(8))
 mygtukas9 = Button(pagrindinis_langas, text="9", padx=40, pady=20, command=lambda: mygtuko_ivedimas(9))
 mygtukas0 = Button(pagrindinis_langas, text="0", padx=40, pady=20, command=lambda: mygtuko_ivedimas(0))
-mygtukas_plius = Button(pagrindinis_langas, text="+", padx=40, pady=20, command=lambda: mygtukas_plius("+"))
+mygtukas_plius = Button(pagrindinis_langas, text="+", padx=40, pady=20, command=lambda: mygtuko_ivedimas("+"))
 mygtukas_lygu = Button(pagrindinis_langas, text="=", padx=90, pady=20, command=lambda: mygtukas_lygu("="))
 mygtukas_isvalantis = Button(pagrindinis_langas, text="isvalyti!", padx=70, pady=20, command=lambda: mygtukas_isvalantis("isvalyti"))
-mygtukas_atimti = Button(pagrindinis_langas, text="-", padx=40, pady=20, command=lambda: mygtukas_atimti("-"))
-mygtukas_dauginti = Button(pagrindinis_langas, text="*", padx=40, pady=20, command=lambda: mygtukas_dauginti("*"))
-mygtukas_dalinti = Button(pagrindinis_langas, text="/", padx=39, pady=20 , command=lambda: mygtukas_dalinti("/"))
+mygtukas_atimti = Button(pagrindinis_langas, text="-", padx=40, pady=20, command=lambda: mygtuko_ivedimas("-"))
+mygtukas_dauginti = Button(pagrindinis_langas, text="*", padx=40, pady=20, command=lambda: mygtuko_ivedimas("*"))
+mygtukas_dalinti = Button(pagrindinis_langas, text="/", padx=39, pady=20 , command=lambda: mygtuko_ivedimas("/"))
 
 
 
