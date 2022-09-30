@@ -1,14 +1,17 @@
 from tkinter import *
-import math
 
 pagrindinis_langas = Tk()
 pagrindinis_langas.title("Skaiciuotuvas")
+
 
 
 # Laukų, mygtukų formavimas
 
 ivedimas1 = Entry(pagrindinis_langas, width=40, borderwidth=10)
 ivedimas1.grid(row=0, column=0, columnspan=3)
+
+def mygtuko_ivedimas(item):
+    
 
     
    
