@@ -78,7 +78,7 @@ mygtukas_atimti.grid(row=6, column=0)
 mygtukas_dauginti.grid(row=6, column=1)
 mygtukas_dalinti.grid(row=6, column=2)
 
-mygtukas_lygu.grid(row=5, column=1)
-mygtukas_isvalantis.grid(row=4, column=1)
+mygtukas_lygu.grid(row=5, column=1, columnspan=2)
+mygtukas_isvalantis.grid(row=4, column=1, columnspan=2)
 
 pagrindinis_langas.mainloop()
