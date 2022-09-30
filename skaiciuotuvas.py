@@ -32,6 +32,14 @@ def mygtukas_lygu():
     ivedimas1.delete(0, END)
     ivedimas1.insert(0, f_num + int(antras_skaicius))
 
+def mygtukas_atimti():
+    pass
+
+def mygtukas_dauginti():
+    pass
+
+def mygtukas_dalinti():
+    pass
     
    
 
@@ -48,6 +56,9 @@ mygtukas0 = Button(pagrindinis_langas, text="0", padx=40, pady=20, command=lambd
 mygtukas_plius = Button(pagrindinis_langas, text="+", padx=40, pady=20, command= mygtukas_plius)
 mygtukas_lygu = Button(pagrindinis_langas, text="=", padx=90, pady=20, command= mygtukas_lygu)
 mygtukas_isvalantis = Button(pagrindinis_langas, text="Isvalyti!", padx=70, pady=20, command= mygtukas_isvalantis)
+mygtukas_atimti = Button(pagrindinis_langas, text="-", padx=40, pady=20, command= mygtukas_atimti)
+mygtukas_dauginti = Button(pagrindinis_langas, text="*", padx=40, pady=20, command= mygtukas_dauginti)
+mygtukas_dalinti = Button(pagrindinis_langas, text="/", padx=39, pady=20 , command= mygtukas_dalinti)
 
 
 
@@ -63,6 +74,9 @@ mygtukas8.grid(row=1, column=1)
 mygtukas9.grid(row=1, column=2)
 mygtukas0.grid(row=4, column=2)
 mygtukas_plius.grid(row=5, column=0)
+mygtukas_atimti.grid(row=6, column=0)
+mygtukas_dauginti.grid(row=6, column=1)
+mygtukas_dalinti.grid(row=6, column=2)
 
 mygtukas_lygu.grid(row=5, column=1)
 mygtukas_isvalantis.grid(row=6, column=2)
