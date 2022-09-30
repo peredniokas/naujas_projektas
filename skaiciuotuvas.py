@@ -7,7 +7,7 @@ pagrindinis_langas.title("Skaiciuotuvas")
 equation = StringVar()
 # Laukų, mygtukų formavimas
 lauko_ivedimas = Entry(pagrindinis_langas, textvariable=equation)
-
+lauko_ivedimas.grid(columnspan=4, ipadx=70)
 
     
 
