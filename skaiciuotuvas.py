@@ -35,9 +35,12 @@ mygtukas9 = Button(btns_frame, text="9", command= lambda: paspaudimas(9))
 mygtukas0 = Button(btns_frame, text="0", command= lambda: paspaudimas(0))
 
 mygtukas_isvalyti = Button(btns_frame, text="Isvalyti", command= lambda: paspaudimas())
-mygtukas_dalybai = Button(btns_frame, text= "/", command= lambda: paspaudimas())
-mygtukas_daugybai = Button(btns_frame, text="*", command= lambda: paspaudimas())
-mygtukas_sudeti = Button(btns_frame, text="+", command= lambda: paspaudimas())
+mygtukas_dalybai = Button(btns_frame, text= "/", command= lambda: paspaudimas("/"))
+mygtukas_daugybai = Button(btns_frame, text="*", command= lambda: paspaudimas("*"))
+mygtukas_sudeti = Button(btns_frame, text="+", command= lambda: paspaudimas("+"))
+mygtukas_atimti = Button(btns_frame, text="-", command= lambda: paspaudimas("-"))
+mygtukas_taskas = Button(btns_frame, text=".", command=lambda: paspaudimas("."))
+mygtukas_lygu = Button(btns_frame, text="=", command=lambda: paspaudimas("="))
 
 
 mygtukas1.grid(row=3, column=0)
@@ -55,6 +58,9 @@ mygtukas_isvalyti.grid(row=0, column=0)
 mygtukas_dalybai.grid(row=0, column=3)
 mygtukas_daugybai.grid(row=1, column=3)
 mygtukas_sudeti.grid(row=3, column=3)
+mygtukas_atimti.grid(row=2, column=3)
+mygtukas_taskas.grid(row=4, column=2)
+mygtukas_lygu.grid(row=4, column=3)
 
 
 
