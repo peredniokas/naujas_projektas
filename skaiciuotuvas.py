@@ -16,9 +16,9 @@ ivedimas1.grid(row=0, column=0, columnspan=3)
 def mygtuko_ivedimas():
     return
 
-mygtukas1 = Button(pagrindinis_langas, text="1", command=mygtuko_ivedimas)
-mygtukas2 = Button(pagrindinis_langas, text="2", command=mygtuko_ivedimas)
-mygtukas3 = Button(pagrindinis_langas, text="3", command=mygtuko_ivedimas)
+mygtukas1 = Button(pagrindinis_langas, text="1", padx=40, pady=20, command=mygtuko_ivedimas)
+mygtukas2 = Button(pagrindinis_langas, text="2", padx=40, pady=20, command=mygtuko_ivedimas)
+mygtukas3 = Button(pagrindinis_langas, text="3", padx=40, pady=20, command=mygtuko_ivedimas)
 mygtukas4 = Button(pagrindinis_langas, text="4", command=mygtuko_ivedimas)
 mygtukas5 = Button(pagrindinis_langas, text="5", command=mygtuko_ivedimas)
 mygtukas6 = Button(pagrindinis_langas, text="6", command=mygtuko_ivedimas)
