@@ -1,7 +1,3 @@
-# Patobulinti 1 užduoties programą, kad ji:
-# Įvedus vardą, atspausdintų "Labas, {vardas}!" ne tik nuspaudus mygtuką, bet ir paspaudus mygtuką "Enter"
-
-
 from tkinter import *
 
 pagrindinis_langas = Tk()
@@ -24,8 +20,32 @@ def mygtukas_isvalantis():
 def mygtukas_plius():
     pirmas_skaicius = ivedimas1.get()
     global f_num
+    global math
+    math = "addition"
+    f_num = int(pirmas_skaicius)
+    ivedimas1.delete(0, END)
+
+def mygtukas_atimti():
+    pirmas_skaicius = ivedimas1.get()
+    global f_num
     global match
-    math = "pridedame"
+    math = "subtraction"
+    f_num = int(pirmas_skaicius)
+    ivedimas1.delete(0, END)
+
+def mygtukas_dauginti():
+    pirmas_skaicius = ivedimas1.get()
+    global f_num
+    global match
+    math = "multiplication"
+    f_num = int(pirmas_skaicius)
+    ivedimas1.delete(0, END)
+
+def mygtukas_dalinti():
+    pirmas_skaicius = ivedimas1.get()
+    global f_num
+    global match
+    math = "division"
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
 
@@ -33,46 +53,17 @@ def mygtukas_lygu():
     antras_skaicius = ivedimas1.get()
     ivedimas1.delete(0, END)
 
-    if math == "pridedame":    
+    if math == "+":    
         ivedimas1.insert(0, f_num + int(antras_skaicius))
 
-    if math == "atimame":
+    elif  math == "subtraction":
         ivedimas1.insert(0, f_num - int(antras_skaicius))
 
-    if math == "daugyba":
+    elif math == "multiplication":
         ivedimas1.insert(0, f_num * int(antras_skaicius))
 
-    if math == "dalyba":
+    elif math == "division":
         ivedimas1.insert(0, f_num / int(antras_skaicius))
-
-    
-
-
-def mygtukas_atimti():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global match
-    math = "atimame"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
-
-
-def mygtukas_dauginti():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global match
-    math = "daugyba"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
-
-
-def mygtukas_dalinti():
-    pirmas_skaicius = ivedimas1.get()
-    global f_num
-    global match
-    math = "dalyba"
-    f_num = int(pirmas_skaicius)
-    ivedimas1.delete(0, END)
 
     
    
