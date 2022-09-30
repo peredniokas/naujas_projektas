@@ -1,7 +1,9 @@
 from tkinter import *
 
 Skaiciuotuvas = Tk()
-root =Tk()
-root.geometry("320x340")
+
+Skaiciuotuvas.geometry("320x340")
+Skaiciuotuvas.title("Pragaro Skaiciuotuvas")
+
 
 Skaiciuotuvas.mainloop()
