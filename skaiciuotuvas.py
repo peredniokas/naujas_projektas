@@ -26,7 +26,12 @@ def mygtukas_plius():
     global f_num
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
-    
+
+def mygtukas_lygu():
+    antras_skaicius = ivedimas1.get()
+    ivedimas1.delete(0, END)
+    ivedimas1.insert(0, f_num + int(antras_skaicius))
+
     
    
 
@@ -41,7 +46,7 @@ mygtukas8 = Button(pagrindinis_langas, text="8", padx=40, pady=20, command=lambd
 mygtukas9 = Button(pagrindinis_langas, text="9", padx=40, pady=20, command=lambda: mygtuko_ivedimas(9))
 mygtukas0 = Button(pagrindinis_langas, text="0", padx=40, pady=20, command=lambda: mygtuko_ivedimas(0))
 mygtukas_plius = Button(pagrindinis_langas, text="+", padx=40, pady=20, command= mygtukas_plius)
-mygtukas_lygu = Button(pagrindinis_langas, text="=", padx=90, pady=20, command=lambda: mygtuko_ivedimas())
+mygtukas_lygu = Button(pagrindinis_langas, text="=", padx=90, pady=20, command= mygtukas_lygu)
 mygtukas_isvalantis = Button(pagrindinis_langas, text="Isvalyti!", padx=70, pady=20, command= mygtukas_isvalantis)
 
 
