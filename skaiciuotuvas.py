@@ -1,63 +1,77 @@
 from tkinter import *
+ 
 expression = ""
-
-
-
-pagrindinis_langas = Tk()
-pagrindinis_langas.title("Skaiciuotuvas")
-
-
-equation = StringVar()
-# Laukų, mygtukų formavimas
-lauko_ivedimas = Entry(pagrindinis_langas, textvariable=equation)
-lauko_ivedimas.grid(columnspan=4, ipadx=70)
-
-def mygtuko_ivedimas(num):
+ 
+def press(num):
     global expression
     expression = expression + str(num)
     equation.set(expression)
-
+ 
+def equalpress():
+    try:
+        global expression
+        total = str(eval(expression))
+        equation.set(total)
+        expression = ""
+    except:
+        equation.set(" error ")
+        expression = ""
+def clear():
+    global expression
+    expression = ""
+    equation.set("")
+ 
+if __name__ == "__main__":
+    Skaiciuotuvas = Tk()
+ 
+    Skaiciuotuvas.configure(background="light green")
+ 
+    Skaiciuotuvas.title("Keistas Skaiciuotuvas")
+ 
+    Skaiciuotuvas.geometry("270x150")
+ 
+    equation = StringVar()
+ 
+    expression_field = Entry(Skaiciuotuvas, textvariable=equation)
+ 
+    expression_field.grid(columnspan=4, ipadx=70)
+ 
+    mygtukas_1 = Button(Skaiciuotuvas, text=' 1 ', fg='black', bg='red',command=lambda: press(1), height=1, width=7)
+    mygtukas_2 = Button(Skaiciuotuvas, text=' 2 ', fg='black', bg='red',command=lambda: press(2), height=1, width=7)
+    mygtukas_3 = Button(Skaiciuotuvas, text=' 3 ', fg='black', bg='red',command=lambda: press(3), height=1, width=7)
+    mygtukas_4 = Button(Skaiciuotuvas, text=' 4 ', fg='black', bg='red',command=lambda: press(4), height=1, width=7)
+    mygtukas_5 = Button(Skaiciuotuvas, text=' 5 ', fg='black', bg='red',command=lambda: press(5), height=1, width=7)
+    mygtukas_6 = Button(Skaiciuotuvas, text=' 6 ', fg='black', bg='red',command=lambda: press(6), height=1, width=7)
+    mygtukas_7 = Button(Skaiciuotuvas, text=' 7 ', fg='black', bg='red',command=lambda: press(7), height=1, width=7)
+    mygtukas_8 = Button(Skaiciuotuvas, text=' 8 ', fg='black', bg='red',command=lambda: press(8), height=1, width=7)
+    mygtukas_9 = Button(Skaiciuotuvas, text=' 9 ', fg='black', bg='red',command=lambda: press(9), height=1, width=7)
+    mygtukas_0 = Button(Skaiciuotuvas, text=' 0 ', fg='black', bg='red',command=lambda: press(0), height=1, width=7)
     
-   
+    mygtukas_sudeti = Button(Skaiciuotuvas, text=' + ', fg='black', bg='red',command=lambda: press("+"), height=1, width=7)
+    mygtukas_atimti = Button(Skaiciuotuvas, text=' - ', fg='black', bg='red',command=lambda: press("-"), height=1, width=7)
+    mygtukas_dauginti = Button(Skaiciuotuvas, text=' * ', fg='black', bg='red',command=lambda: press("*"), height=1, width=7)
+    mygtukas_dalinti = Button(Skaiciuotuvas, text=' / ', fg='black', bg='red',command=lambda: press("/"), height=1, width=7)
+    mygtukas_lygu = Button(Skaiciuotuvas, text=' = ', fg='black', bg='red',command=equalpress, height=1, width=7)
+    
+    mygtukas_isvalyti = Button(Skaiciuotuvas, text='Istrinti', fg='black', bg='red',command=clear, height=1, width=7)
+    mygtukas_taskas= Button(Skaiciuotuvas, text='.', fg='black', bg='red',command=lambda: press('.'), height=1, width=7)
 
-mygtukas1 = Button(pagrindinis_langas, text="1", padx=40, pady=20, command=lambda: mygtuko_ivedimas(1))
-mygtukas2 = Button(pagrindinis_langas, text="2", padx=40, pady=20, command=lambda: mygtuko_ivedimas(2))
-mygtukas3 = Button(pagrindinis_langas, text="3", padx=40, pady=20, command=lambda: mygtuko_ivedimas(3))
-mygtukas4 = Button(pagrindinis_langas, text="4", padx=40, pady=20, command=lambda: mygtuko_ivedimas(4))
-mygtukas5 = Button(pagrindinis_langas, text="5", padx=40, pady=20, command=lambda: mygtuko_ivedimas(5))
-mygtukas6 = Button(pagrindinis_langas, text="6", padx=40, pady=20, command=lambda: mygtuko_ivedimas(6))
-mygtukas7 = Button(pagrindinis_langas, text="7", padx=40, pady=20, command=lambda: mygtuko_ivedimas(7))
-mygtukas8 = Button(pagrindinis_langas, text="8", padx=40, pady=20, command=lambda: mygtuko_ivedimas(8))
-mygtukas9 = Button(pagrindinis_langas, text="9", padx=40, pady=20, command=lambda: mygtuko_ivedimas(9))
-mygtukas0 = Button(pagrindinis_langas, text="0", padx=40, pady=20, command=lambda: mygtuko_ivedimas(0))
-mygtukas_plius = Button(pagrindinis_langas, text="+", padx=40, pady=20, command=lambda: mygtuko_ivedimas("+"))
-mygtukas_lygu = Button(pagrindinis_langas, text="=", padx=90, pady=20, command=lambda: mygtukas_lygu("="))
-mygtukas_isvalantis = Button(pagrindinis_langas, text="isvalyti!", padx=70, pady=20, command=lambda: mygtukas_isvalantis("isvalyti"))
-mygtukas_atimti = Button(pagrindinis_langas, text="-", padx=40, pady=20, command=lambda: mygtuko_ivedimas("-"))
-mygtukas_dauginti = Button(pagrindinis_langas, text="*", padx=40, pady=20, command=lambda: mygtuko_ivedimas("*"))
-mygtukas_dalinti = Button(pagrindinis_langas, text="/", padx=39, pady=20 , command=lambda: mygtuko_ivedimas("/"))
-mygtukas_taskas= Button(pagrindinis_langas, text=".", padx=40, pady=20, command=lambda: mygtukas_taskas("."))
-
-
-
-# Lango piešimas
-mygtukas1.grid(row=3, column=0)
-mygtukas2.grid(row=3, column=1)
-mygtukas3.grid(row=3, column=2)
-mygtukas4.grid(row=2, column=0)
-mygtukas5.grid(row=2, column=1)
-mygtukas6.grid(row=2, column=2)
-mygtukas7.grid(row=1, column=0)
-mygtukas8.grid(row=1, column=1)
-mygtukas9.grid(row=1, column=2)
-mygtukas0.grid(row=4, column=0)
-mygtukas_plius.grid(row=5, column=0)
-mygtukas_atimti.grid(row=6, column=0)
-mygtukas_dauginti.grid(row=6, column=1)
-mygtukas_dalinti.grid(row=6, column=2)
-
-mygtukas_lygu.grid(row=5, column=1, columnspan=2)
-mygtukas_isvalantis.grid(row=4, column=1, columnspan=2)
-mygtukas_taskas.grid(row=7, column=1)
-
-pagrindinis_langas.mainloop()
+    mygtukas_taskas.grid(row=6, column=0)
+    
+    mygtukas_isvalyti.grid(row=5, column='1')
+    mygtukas_lygu.grid(row=5, column=2)
+    mygtukas_dalinti.grid(row=5, column=3)
+    mygtukas_dauginti.grid(row=4, column=3)
+    mygtukas_atimti.grid(row=3, column=3)
+    mygtukas_sudeti.grid(row=2, column=3)
+    mygtukas_0.grid(row=5, column=0)
+    mygtukas_9.grid(row=4, column=2)
+    mygtukas_8.grid(row=4, column=1)
+    mygtukas_7.grid(row=4, column=0)
+    mygtukas_6.grid(row=3, column=2)
+    mygtukas_5.grid(row=3, column=1)
+    mygtukas_4.grid(row=3, column=0)
+    mygtukas_3.grid(row=2, column=2)
+    mygtukas_2.grid(row=2, column=1)
+    mygtukas_1.grid(row=2, column=0)
+    Skaiciuotuvas.mainloop()
