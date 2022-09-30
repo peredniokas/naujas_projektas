@@ -4,13 +4,11 @@ pagrindinis_langas = Tk()
 pagrindinis_langas.title("Skaiciuotuvas")
 
 
-
+equation = StringVar()
 # Laukų, mygtukų formavimas
+lauko_ivedimas = Entry(pagrindinis_langas, textvariable=equation)
 
-ivedimas1 = Entry(pagrindinis_langas, width=40, borderwidth=10)
-ivedimas1.grid(row=0, column=0, columnspan=3)
 
-def mygtuko_ivedimas(item):
     
 
     
@@ -32,6 +30,7 @@ mygtukas_isvalantis = Button(pagrindinis_langas, text="isvalyti!", padx=70, pady
 mygtukas_atimti = Button(pagrindinis_langas, text="-", padx=40, pady=20, command=lambda: mygtuko_ivedimas("-"))
 mygtukas_dauginti = Button(pagrindinis_langas, text="*", padx=40, pady=20, command=lambda: mygtuko_ivedimas("*"))
 mygtukas_dalinti = Button(pagrindinis_langas, text="/", padx=39, pady=20 , command=lambda: mygtuko_ivedimas("/"))
+mygtukas_taskas= Button(pagrindinis_langas, text=".", padx=40, pady=20, command=lambda: mygtukas_taskas("."))
 
 
 
@@ -53,5 +52,6 @@ mygtukas_dalinti.grid(row=6, column=2)
 
 mygtukas_lygu.grid(row=5, column=1, columnspan=2)
 mygtukas_isvalantis.grid(row=4, column=1, columnspan=2)
+mygtukas_taskas.grid(row=7, column=1)
 
 pagrindinis_langas.mainloop()
