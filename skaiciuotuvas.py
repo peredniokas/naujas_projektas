@@ -21,7 +21,7 @@ def mygtukas_plius():
     pirmas_skaicius = ivedimas1.get()
     global f_num
     global math
-    math = "addition"
+    math = "pridedame"
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
 
@@ -29,7 +29,7 @@ def mygtukas_atimti():
     pirmas_skaicius = ivedimas1.get()
     global f_num
     global match
-    math = "subtraction"
+    math = "atimame"
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
 
@@ -37,7 +37,7 @@ def mygtukas_dauginti():
     pirmas_skaicius = ivedimas1.get()
     global f_num
     global match
-    math = "multiplication"
+    math = "dauginame"
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
 
@@ -45,7 +45,7 @@ def mygtukas_dalinti():
     pirmas_skaicius = ivedimas1.get()
     global f_num
     global match
-    math = "division"
+    math = "daliname"
     f_num = int(pirmas_skaicius)
     ivedimas1.delete(0, END)
 
@@ -53,16 +53,16 @@ def mygtukas_lygu():
     antras_skaicius = ivedimas1.get()
     ivedimas1.delete(0, END)
 
-    if math == "+":    
+    if math == "pridedame":    
         ivedimas1.insert(0, f_num + int(antras_skaicius))
 
-    elif  math == "subtraction":
+    elif  math == "atimame":
         ivedimas1.insert(0, f_num - int(antras_skaicius))
 
-    elif math == "multiplication":
+    elif math == "dauginame":
         ivedimas1.insert(0, f_num * int(antras_skaicius))
 
-    elif math == "division":
+    elif math == "daliname":
         ivedimas1.insert(0, f_num / int(antras_skaicius))
 
     
